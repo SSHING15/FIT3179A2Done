@@ -39,13 +39,15 @@
       "field": "Prices",
       "type": "quantitative",
       "scale": {"zero": false},
-      "axis": {"minExtent": 30},
+      "axis": {"minExtent": 30,"domain": true, "grid": false, "ticks": true},
       "title": "Food Price Index"
+
     },
     "x": {
       "field": "Population",
       "scale": {"type": "log"},
-      "title": "Population (Log)"
+      "title": "Population (Log)",
+      "axis": {"domain": true, "grid": false, "ticks": true}
     },
     "size": {
       "field": "Density",
@@ -91,6 +93,6 @@
 
   ],
   
-  "config": {}
+  "config": {"view": {"stroke": null}}
 }
 
