@@ -33,7 +33,7 @@
         "color": {
           "field": "Country",
           "type": "nominal",
-          "scale": {"scheme": "tableau20"}
+          "scale": {"scheme": "set2"}
         },
         "opacity":{
           "condition":{"selection":"country_highlight","value":1  },
