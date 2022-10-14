@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australian Fruit Prices (1991-2020) ",
+  "width": 700,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/SSHING15/FIT3179-MINE/main/AREA_CHART_FRUIT.csv"
+  },
+  "selection":{
+    "fruit_highlight":{
+      "type":"multi",
+      "fields":["Fruit"],
+      "bind":"legend" 
+    }
+  },
+  
+  "mark": "area",
+  "encoding": {
+    "x": {
+      "timeUnit": "year",
+      "field": "Year",
+      "title": "Year",
+      "axis": {"format": "%Y"}
+    },
+    "y": {
+      "aggregate": "average",
+
+      "field": "Price AUD/kg",
+      "title": "Price per Kilogram"
+    },
+    "color": {
+      "field": "Fruit",
+      "scale": {"scheme": "category20c"},
+      "title": "Type of Fruit"
+    },
+    "opacity":{
+      "condition":{"selection":"fruit_highlight","value":1  },
+      "value":0.2},
+    
+    "tooltip": [
+      {"field": "Fruit", "type": "nominal", "title": "Type of Fruit"},
+      {"field": "Price AUD/kg", "type": "quantitative", "title": "Price AUD/kg"},
+      {"timeUnit":"year","field": "Year", "type": "quantitative", "title": "Year"}
+
+    ]
+  },
+  "config": {}
+}

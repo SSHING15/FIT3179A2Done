@@ -1,0 +1,133 @@
+
+:root{
+    --textcolour: white;
+    --font:'Lucida Sans Unicode';
+    --seccolour: #2b2b2b;
+}
+
+.Title {
+    font-size: 40;
+    font-weight: bold;
+    margin-left: 575px;
+    color: var(--textcolour);
+    font-family: var(--font);
+    
+}
+.text_div {
+    display: flex;
+
+    width: 400px;
+    height: 50px;
+    
+    /*
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    color: white;
+    */
+    color: var(--textcolour);
+    font-family: var(--font);
+    font-weight: bolder;
+    font-size: xx-large;
+    margin-left: 40px;
+    padding-top: 0px;
+    padding-top: 20px;
+
+}
+
+.text_div2 {
+    display: flex;
+
+    width: 200px;
+    height: 50px;
+    
+    /*
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+    color: white;
+    */
+    color: var(--textcolour);
+    font-weight: bold;
+    font-family: var(--font);
+    font-weight: bolder;
+    font-size: x-large;
+    margin-left: 30px;
+    padding-top: 20px;
+}
+
+.text_p{
+    width: 500px;
+    color: var(--textcolour);
+    font-family:var(--font);
+    padding-left: 40px;
+}
+
+.text_p2{
+    width: 500px;
+    color: var(--textcolour);
+    font-family:var(--font);
+    padding-left: 20px;
+}
+.graphs {
+        display: flex;
+}
+
+.sections {
+    background-color: var(--seccolour);
+}
+
+div {
+    display: flex;
+}
+
+section{
+    display: flex;
+}
+
+body {
+    width: 1550px;
+}
+
+.wholeWeb{
+    width: 1550;
+}
+
+.bold {
+    font-weight: bolder;
+    font-size: medium;
+    
+}
+
+.boldChina {
+    font-weight: bolder;
+    font-size: medium;
+    color: #8dd380;  
+}
+
+.boldZim {
+    font-weight: bolder;
+    font-size: medium;
+    color: #d8b5a5;  
+}
+.boldUS {
+    font-weight: bolder;
+    font-size: medium;
+    color: #9e765f
+    ;  
+}
+
+.boldIn {
+    font-weight: bolder;
+    font-size: medium;
+    font-style: italic;
+}
+
+.boldAU {
+    font-weight: bolder;
+    font-size: medium;
+    color: #9ecae9;
+
+}
