@@ -52,5 +52,5 @@
       }
     }
   ],
-  "config": {}
+  "config": {"view": {"stroke": null}}
 }
