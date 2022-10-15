@@ -6,17 +6,20 @@
   "data": {
     "url": "https://raw.githubusercontent.com/SSHING15/FIT3179-MINE/main/MAP_FOOD.csv"
   },
-  "params": [{
-    "name": "Density_Above",
-    "value": 0,
-    "bind": {
-      "input": "range",
-      "min": 0,
-      "max": 1000,
-      "step": 20,
-      "name": "Minimum Population Density: "
-    }}],
-    "transform": [{"filter": "datum.Density>Density_Above"}],
+  "params": [
+    {
+      "name": "Density_Above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1000,
+        "step": 20,
+        "name": "Minimum Population Density: "
+      }
+    }
+  ],
+  "transform": [{"filter": "datum.Density>Density_Above"}],
   "encoding": {
     "y": {
       "field": "Prices",
@@ -26,73 +29,82 @@
       "title": "Food Price Index"
     },
     "x": {
-      "field": "Population",
+      "field": "PopulationSm",
       "scale": {"type": "log"},
-      "title": "Population (Log)"
-    }},
-  "layer":[
-    {
-      
-      "mark": "circle",
-  "encoding": {
-    "y": {
-      "field": "Prices",
-      "type": "quantitative",
-      "scale": {"zero": false},
-      "axis": {"minExtent": 30,"domain": true, "grid": false, "ticks": true},
-      "title": "Food Price Index"
-
-    },
-    "x": {
-      "field": "Population",
-      "scale": {"type": "log"},
-      "title": "Population (Log)",
-      "axis": {"domain": true, "grid": false, "ticks": true}
-    },
-    "size": {
-      "field": "Density",
-      "type": "quantitative",
-      "title": "Population Density (P/km^2)",
-      "legend": {"orient": "bottom-left"}
-    },
-    "tooltip": [
-      {"field": "Country", "type": "nominal", "title": "Country"},
-      {"field": "Population", "type": "quantitative", "title": "Population","format":","},
-      {
-        "field": "Density",
-        "type": "quantitative",
-        "title": "Population Density (P/km^2)",
-        "format":","
-      },
-      {
-        "field": "Rank",
-        "type": "quantitative",
-        "title": "Global Rank for Food Prices"
-      }
-    ]
-  }
-    },
-    {
-      "mark"  :{
-        "type" :"text",
-        "align":"right",
-        "baseline":"middle",
-        "dx":-9,      
-        "fontSize":12.5,      
-        "fontStyle":"italic"},      
-      "encoding":{"text":{"field":"Country","type":"nominal"},        
-      "color":{"value":"black"},
-      "opacity":{
-        "condition"  : {            
-          "test" :"datum['Country']== 'China' || datum['Country'] == 'India' || datum['Country'] == 'United Kingdom' || datum['Country']== 'Singapore' ||datum['Country'] == 'South Korea'",
-          "value":1},          
-          "value":0}
+      "title": "Population (Million)"
     }
-  }
-  
-
+  },
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "y": {
+          "field": "Prices",
+          "type": "quantitative",
+          "scale": {"zero": false},
+          "axis": {
+            "minExtent": 30,
+            "domain": true,
+            "grid": false,
+            "ticks": true
+          },
+          "title": "Food Price Index"
+        },
+        "x": {
+          "field": "PopulationSm",
+          "scale": {"type": "log"},
+          "title": "Population (Million)",
+          "axis": {"domain": true, "grid": false, "ticks": true}
+        },
+        "size": {
+          "field": "Density",
+          "type": "quantitative",
+          "title": "Population Density (P/km^2)",
+          "legend": {"orient": "bottom-left"}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {
+            "field": "Population",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ","
+          },
+          {
+            "field": "Density",
+            "type": "quantitative",
+            "title": "Population Density (P/km^2)",
+            "format": ","
+          },
+          {
+            "field": "Rank",
+            "type": "quantitative",
+            "title": "Global Rank for Food Prices"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -9,
+        "fontSize": 12.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country']== 'China' || datum['Country'] == 'India' || datum['Country'] == 'United Kingdom' || datum['Country']== 'Singapore' ||datum['Country'] == 'South Korea'",
+            "value": 1
+          },
+          "value": 0
+        }
+      }
+    }
   ],
-  
   "config": {}
 }
-
