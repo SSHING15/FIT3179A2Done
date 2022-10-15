@@ -38,6 +38,8 @@
     {
       "mark": "circle",
       "encoding": {
+        "color": {"value": "#873e23"},
+        "opacity":{"value":0.8},
         "y": {
           "field": "Prices",
           "type": "quantitative",
