@@ -92,7 +92,7 @@ body {
 }
 
 .wholeWeb{
-    width: 1550;
+    width: 100%;
 }
 
 .bold {
@@ -104,19 +104,18 @@ body {
 .boldChina {
     font-weight: bolder;
     font-size: medium;
-    color: #8dd380;  
+    color: #8da0cb;  
 }
 
 .boldZim {
     font-weight: bolder;
     font-size: medium;
-    color: #d8b5a5;  
+    color: #b3b3b3;  
 }
 .boldUS {
     font-weight: bolder;
     font-size: medium;
-    color: #9e765f
-    ;  
+    color: #e5c597;  
 }
 
 .boldIn {
@@ -128,6 +127,9 @@ body {
 .boldAU {
     font-weight: bolder;
     font-size: medium;
-    color: #9ecae9;
+    color: #fc8d62;
 
+}
+.map_sect{
+    margin-left: 200px;
 }
